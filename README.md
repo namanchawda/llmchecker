@@ -130,8 +130,4 @@ docker compose up --build
 
 ---
 
-## Notes
 
-- Do **not** commit your `.env` file to version control. It contains secrets.
-- The `node_modules/` and `dist/` folders are excluded from the project — Docker installs all dependencies automatically during the build step.
-- The database schema and seed data are applied automatically on first run via TypeORM migrations.
