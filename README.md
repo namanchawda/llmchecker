@@ -19,24 +19,32 @@ cp .env.example .env
 Then open `.env` and fill in all the required values:
 
 ```dotenv
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASS=postgres
-DB_NAME=llm_monitor
+OPENAI_API_KEY=
 
-JWT_SECRET=your_jwt_secret_here
+GOOGLE_CLIENT_ID=
+GOOGLE_CLIENT_SECRET=
+GOOGLE_CALLBACK_URL=
+
+JWT_SECRET=
 
 SMTP_HOST=
-SMTP_PORT=587
+SMTP_PORT=
+SMTP_SECURE=
 SMTP_USER=
 SMTP_PASS=
 SMTP_FROM=
 
+ENCRYPTION_KEY=
+
+DB_HOST=
+DB_PORT=
+DB_USER=
+DB_PASS=
+DB_NAME=
+
+# ── Telegram alerts (optional) ─────────────────────────────────
 TELEGRAM_BOT_TOKEN=
 
-GOOGLE_CLIENT_ID=
-GOOGLE_CLIENT_SECRET=
 ```
 
 > **Note:** The DB variables do not need to be changed if you are running via Docker. Docker Compose sets them internally. Only fill in the secrets like `JWT_SECRET`, SMTP credentials, and any API keys.
